@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Audio extends Media {
+public class Audio extends Media implements Playable{
 
     long duration;
 
@@ -22,5 +22,11 @@ public class Audio extends Media {
     void showContent() {
         super.showContent();
         System.out.println(duration);
+    }
+
+    @Override
+    public void play() {
+        showContent();
+        System.out.println("Play audio");
     }
 }
