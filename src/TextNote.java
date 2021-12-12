@@ -1,18 +1,26 @@
+import java.util.Date;
+
 public class TextNote extends Note {
 
     String title;
+
+    TextNote(String author, Date date, String message, MessageType messageType, long noteSize, String title) {
+        super(author, date, message, messageType, noteSize);
+        this.title = title;
+    }
 
     @Override
     long getNoteSize() {
         return 0;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getTitle() {
         return title;
     }
 
+    @Override
+    void showContent() {
+        super.showContent();
+        System.out.println(title);
+    }
 }

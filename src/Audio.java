@@ -1,6 +1,13 @@
+import java.util.Date;
+
 public class Audio extends Media {
 
     long duration;
+
+    Audio(String author, Date date, String message, MessageType messageType, long noteSize, String extension, long duration) {
+        super(author, date, message, messageType, noteSize, extension);
+        this.duration = duration;
+    }
 
     @Override
     long getNoteSize() {
@@ -9,5 +16,11 @@ public class Audio extends Media {
 
     public long getDuration() {
         return duration;
+    }
+
+    @Override
+    void showContent() {
+        super.showContent();
+        System.out.println(duration);
     }
 }

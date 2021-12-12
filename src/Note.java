@@ -2,13 +2,11 @@ import java.util.Date;
 
 abstract class Note {
 
-    private String author;
-    private Date date;
-    private String message;
-    private MessageType messageType;
-    private long noteSize;
-
-    Note() {}
+    private final String author;
+    private final Date date;
+    private final String message;
+    private final MessageType messageType;
+    private final long noteSize;
 
     Note(String author, Date date, String message, MessageType messageType, long noteSize) {
         this.author = author;
@@ -20,6 +18,14 @@ abstract class Note {
 
     void showContent(Note note) {
         System.out.println(note.toString());
+    }
+
+    void showContent() {
+        System.out.println(author);
+        System.out.println(date);
+        System.out.println(message);
+        System.out.println(messageType);
+        System.out.println(noteSize);
     }
 
     public String getAuthor() {
