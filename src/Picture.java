@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Picture extends Media {
+public class Picture extends Media implements Printable {
 
     int wight;
     int height;
@@ -31,4 +31,8 @@ public class Picture extends Media {
         System.out.println(wight);
     }
 
+    @Override
+    public void print() {
+        showContent();
+    }
 }

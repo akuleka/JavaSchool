@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class TextNote extends Note {
+public class TextNote extends Note implements Printable {
 
     String title;
 
@@ -22,5 +22,10 @@ public class TextNote extends Note {
     void showContent() {
         super.showContent();
         System.out.println(title);
+    }
+
+    @Override
+    public void print() {
+        showContent();
     }
 }

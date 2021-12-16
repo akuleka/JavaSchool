@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Video extends Note {
+public class Video extends Note implements Playable {
 
     long duration;
 
@@ -22,6 +22,12 @@ public class Video extends Note {
     void showContent() {
         super.showContent();
         System.out.println(duration);
+    }
+
+    @Override
+    public void play() {
+        showContent();
+        System.out.println("Play video");
     }
 
 }
