@@ -1,3 +1,5 @@
+package note;
+
 public enum MessageType {
 
     RECORD,

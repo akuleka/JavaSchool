@@ -1,3 +1,5 @@
+package note;
+
 import java.util.Date;
 
 public class TextNote extends Note implements Printable {
