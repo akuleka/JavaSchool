@@ -1,3 +1,5 @@
+package note;
+
 import java.util.Date;
 
 abstract class Note {
@@ -51,7 +53,7 @@ abstract class Note {
         return "Author: " + author + ", \n"
                 + "Date: " + date + ", \n"
                 + "Message: " + message + ", \n"
-                + "MessageType: " + messageType.name() + ", \n"
+                + "note.MessageType: " + messageType.name() + ", \n"
                 + "Size: " + noteSize;
     }
 

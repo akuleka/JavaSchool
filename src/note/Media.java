@@ -1,3 +1,5 @@
+package note;
+
 import java.util.Date;
 
 abstract class Media extends Note {
